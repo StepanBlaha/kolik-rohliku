@@ -31,7 +31,7 @@ export default function MountainApp() {
         <div className="mountain-add"><button disabled={!result} onClick={() => setState(current => ({ ...current, amount: number.format(Math.min(1_000_000_000, (amount ?? 0) + 100)) }))}>+ 100 Kč</button><button disabled={!result} onClick={() => setState(current => ({ ...current, amount: number.format(Math.min(1_000_000_000, (amount ?? 0) + 1000)) }))}>+ 1 000 Kč</button></div>
       </section>
       <section className="mountain-scene" aria-label="Hora rohlíků">
-        <div className="mountain-total" aria-live="polite" aria-atomic="true"><div className={`quantity${result && result.whole > 999999 ? ' long' : ''}`}>{result ? number.format(result.whole) : '—'}</div><div className="quantity-label">{result ? quantityLabel(items[0], result.whole) : 'čekáme na platnou cenu'}</div></div>
+        <div className="mountain-total" aria-live="polite" aria-atomic="true"><div className={`quantity${result && result.whole > 999999 ? ' long' : ''}`}>{result ? number.format(result.whole) : '-'}</div><div className="quantity-label">{result ? quantityLabel(items[0], result.whole) : 'čekáme na platnou cenu'}</div></div>
         <svg className="bread-mountain" viewBox="0 0 600 450" aria-hidden="true">
           <ellipse cx="300" cy="412" rx={pile.length ? Math.min(264, 30 + Math.sqrt(pile.length) * 16) : 35} ry="13" fill="#d7cbb1" opacity=".22" />
           <path d="M28 420Q300 415 572 420" stroke="#d9d4c7" fill="none" />
