@@ -7,5 +7,10 @@
 - [Podmínky](/podminky.html): Použití a omezení výpočtu.
 - [Soukromí](/soukromi.html): Místní ukládání cen a provoz webu.
 
+## Provozovatel
+Štěpán Bláha
+stepa15.b@gmail.com
+https://www.stepanblaha.com/
+
 ## Přesnost
 Ceny jsou nastavitelné příklady, ne živé tržní ceny. Výpočet používá celé haléře. Hromada je ilustrační, její růst je logaritmický. Aplikace neprodává potraviny a neposkytuje finanční poradenství.
