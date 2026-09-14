@@ -41,6 +41,6 @@ export default function MountainApp() {
         <p className="mountain-change">{result ? `A ještě ti zbyde ${money(result.remainder)}.` : '\u00a0'}</p>
       </section>
     </main>
-    <footer><span>Hromada je ilustrační. Počet sedí na rohlík.</span><span>Jen pro radost. A trochu perspektivy.</span></footer>
+    <footer><span>Hromada je ilustrační. Počet sedí na rohlík.</span><span className="legal-links"><a href="/podminky.html">Podmínky</a><a href="/soukromi.html">Soukromí</a></span></footer>
   </div>;
 }

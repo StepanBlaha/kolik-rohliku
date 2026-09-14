@@ -1,0 +1,17 @@
+{
+  "name": "Kolik rohlíků?",
+  "short_name": "Kolik rohlíků?",
+  "lang": "cs",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f5ed",
+  "theme_color": "#f7f5ed",
+  "icons": [
+    {
+      "src": "/assets/rohliky.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

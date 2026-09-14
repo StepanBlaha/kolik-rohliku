@@ -1,0 +1,11 @@
+# Kolik rohlíků?
+
+> Česká bezplatná kalkulačka převádějící koruny na celé rohlíky a zobrazující ilustrační horu pečiva.
+
+## Stránky
+- [Kalkulačka](/): Zadejte částku a cenu rohlíku.
+- [Podmínky](/podminky.html): Použití a omezení výpočtu.
+- [Soukromí](/soukromi.html): Místní ukládání cen a provoz webu.
+
+## Přesnost
+Ceny jsou nastavitelné příklady, ne živé tržní ceny. Výpočet používá celé haléře. Hromada je ilustrační, její růst je logaritmický. Aplikace neprodává potraviny a neposkytuje finanční poradenství.
