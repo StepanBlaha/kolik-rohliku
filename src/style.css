@@ -10,3 +10,27 @@ h1{margin-bottom:38px}.unit-options{gap:9px}.unit-button{flex-direction:column;g
 /* Highlight the unit price only while interacting with it. */
 .price-input{background:transparent;border-color:var(--line)}
 .price-input:hover,.price-input:focus-within{background:var(--yellow)}
+/* Neutral accent variation. */
+:root{--yellow:#d2d2ce}
+.price-input:hover{border-color:#b0b0aa}
+.price-input:focus-within{border-color:#777972;box-shadow:0 0 0 3px #d2d2ce55}
+.price-input>span:last-child{color:var(--muted)}
+.receipt-actions button:hover:not(:disabled){box-shadow:0 2px 0 #aaada9}
+button:focus-visible,a:focus-visible,input:focus-visible{outline-color:#73766e}
+.amount-wrap:focus-within{border-color:#73766e}
+
+/* Quieter single-title layout. */
+:root{--yellow:#e9e8e3}
+main{margin-top:70px}
+h1{font-size:48px;line-height:1.15;letter-spacing:-2px;margin-bottom:42px}
+h1>span:after{display:none}
+.unit-button:before{left:18%;right:18%;border-radius:3px;transform:none}
+.unit-button[aria-pressed=true]:before{height:19px;opacity:.8}
+.unit-button:hover:before{opacity:.5}
+.price-input{border-color:#e4e2db}
+.price-input:hover{border-color:#d7d5ce}
+.price-input:focus-within{border-color:#b6b8af;box-shadow:0 0 0 2px #e9e8e340}
+.receipt-actions button:hover:not(:disabled){background:#eeede8;box-shadow:none;transform:none}
+.receipt-actions button:hover:not(:disabled)>span{transform:translate(1px,-1px)}
+@media(max-width:900px){main{margin-top:40px}h1{font-size:41px;letter-spacing:-1.5px}}
+@media(max-width:680px){main{margin-top:12px}h1{font-size:39px;margin-bottom:32px;letter-spacing:-1.5px}}

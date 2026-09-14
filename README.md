@@ -21,11 +21,17 @@ Deploy the generated `dist/` directory to any static host.
 
 ## Structure
 
-- `src/App.tsx`: React UI, controlled inputs, copy and share actions.
+- `src/MountainApp.tsx`: Rohlíky-only React UI and growing bread mountain.
 - `src/items.ts`: Typed comparison items, Czech formatting and result text.
 - `src/math.ts`: Pure parsing and integer-cent calculations.
 - `src/preferences.ts`: Validated local prices and share-link initialization.
 - `src/style.css`: Existing responsive design and interaction styles.
 - `public/assets/`: Flat isometric images, also used for the favicon.
 
-Prices stay in browser storage when available. Share links preserve the amount, selected item, and unit price. Invalid input disables copying/sharing. Clipboard failures provide selectable text.
+Prices stay in browser storage when available. The amount and price accept Czech decimal commas. Invalid input pauses the calculation.
+
+## Mountain version
+
+The mountain calculator is the only app on `main`, served at `/`. The exact quantity and change use integer-cent calculations. The visual pile grows logarithmically and is capped at 240 sprites to keep extreme amounts responsive; reduced-motion preferences disable animation.
+
+The two-version experiment (receipt plus mountain) is preserved in the separate `2ver` branch checkout at `../kolik-rohliku-2ver`. Its changes are staged for a manual commit.
