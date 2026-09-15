@@ -3,9 +3,9 @@
 > Česká bezplatná kalkulačka převádějící koruny na celé rohlíky a zobrazující ilustrační horu pečiva.
 
 ## Stránky
-- [Kalkulačka](/): Zadejte částku a cenu rohlíku.
-- [Podmínky](/podminky.html): Použití a omezení výpočtu.
-- [Soukromí](/soukromi.html): Místní ukládání cen a provoz webu.
+- [Kalkulačka](https://www.kolikrohliku.cz/): Zadejte částku a cenu rohlíku.
+- [Podmínky](https://www.kolikrohliku.cz/podminky.html): Použití a omezení výpočtu.
+- [Soukromí](https://www.kolikrohliku.cz/soukromi.html): Místní ukládání cen a provoz webu.
 
 ## Provozovatel
 Štěpán Bláha
