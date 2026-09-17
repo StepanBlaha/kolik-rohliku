@@ -3,6 +3,7 @@ import { convert, parseMoney } from './math';
 import { items, money, number, quantityLabel, verdict } from './items';
 import { loadInitialState, savePrices } from './preferences';
 import { mountainLayout } from './mountain';
+import TipJar from './TipJar';
 import './mountain.css';
 
 export default function MountainApp() {
@@ -14,7 +15,10 @@ export default function MountainApp() {
   const price = parseMoney(state.price);
   const result = amount !== null && price !== null && price > 0 ? convert(amount, price) : null;
   const pile = mountainLayout(result?.whole ?? 0);
+  const [engaged, setEngaged] = useState(false);
   useEffect(() => { savePrices(state.prices); }, [state.prices]);
+  // Uživatel „zabral", jakmile z platné částky vznikne výsledek – teprve pak nabídneme rohlík.
+  useEffect(() => { if (result && result.whole > 0) setEngaged(true); }, [result]);
   function changePrice(value: string) {
     const parsed = parseMoney(value);
     setState(current => ({ ...current, price: value, prices: parsed !== null && parsed > 0 ? { ...current.prices, rohliky: parsed } : current.prices }));
@@ -42,5 +46,6 @@ export default function MountainApp() {
       </section>
     </main>
     <footer><span>Hromada je ilustrační. Počet sedí na rohlík.</span><span className="legal-links"><a href="/podminky.html">Podmínky</a><a href="/soukromi.html">Soukromí</a></span></footer>
+    <TipJar engaged={engaged} />
   </div>;
 }

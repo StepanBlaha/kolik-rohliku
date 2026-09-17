@@ -1,0 +1,59 @@
+/* "Kup mi rohlík" – tip jar tlačítko + jemný popup, laděno do palety webu. */
+
+.tip-fab{position:fixed;right:18px;bottom:18px;z-index:40;display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink,#302c22);color:#fffdf6;border:1px solid var(--ink,#302c22);border-radius:999px;
+  padding:11px 17px;font-size:13px;font-weight:600;box-shadow:0 6px 20px #302c2226;
+  transition:background .18s,color .18s,border-color .18s}
+.tip-fab:hover{background:#fffdf6;color:var(--ink,#302c22);border-color:#e4dfd2}
+.tip-fab>img{width:20px;height:18px;object-fit:contain}
+
+.tip-overlay{position:fixed;inset:0;z-index:50;background:#302c2270;backdrop-filter:blur(2px);
+  display:flex;align-items:center;justify-content:center;padding:20px;animation:tip-fade .18s ease-out}
+.tip-dialog{position:relative;width:100%;max-width:390px;max-height:92vh;overflow:auto;
+  background:#fffdf6;border:1px solid #e4dfd2;border-radius:16px;padding:30px 28px 22px;
+  box-shadow:0 24px 60px #302c2233;text-align:center;animation:tip-pop .22s cubic-bezier(.2,.9,.3,1.2)}
+.tip-dialog:focus{outline:none}
+
+.tip-close{position:absolute;top:12px;right:14px;border:0;background:none;font-size:16px;
+  color:var(--muted,#797566);line-height:1;padding:6px}
+.tip-close:hover{color:var(--ink,#302c22)}
+
+#tip-title{font-size:24px;line-height:1.15;letter-spacing:-1px;margin:0 0 12px}
+.tip-lead{font-size:13px;line-height:1.6;color:var(--muted,#797566);margin:0 0 20px}
+.tip-lead strong{color:var(--ink,#302c22);font-weight:600}
+
+.tip-presets{margin-bottom:18px}
+.tip-single{display:flex;justify-content:center}
+.tip-card{display:flex;flex-direction:column;align-items:center;gap:5px;padding:16px 26px 14px;
+  background:#f3f1ea;border-radius:14px}
+.tip-roll{width:52px;height:44px;object-fit:contain;margin-bottom:1px}
+.tip-amount{font-size:22px;font-weight:700;letter-spacing:-.6px}
+.tip-plabel{font-size:11px;color:var(--muted,#797566);line-height:1.2}
+
+.tip-qr{width:190px;height:190px;margin:0 auto 10px;background:#fff;border:1px solid #eee7d6;
+  border-radius:12px;padding:10px}
+.tip-qr svg{width:100%;height:100%;display:block}
+.tip-qr-hint{font-size:11px;color:var(--muted,#797566);margin:0 0 14px;line-height:1.5}
+.tip-iban{width:100%;border:1px dashed #cfc9ba;background:none;border-radius:8px;padding:10px;
+  font:11px var(--mono,'Space Mono',monospace);color:var(--ink,#302c22);letter-spacing:.3px;margin-bottom:16px;
+  transition:background .15s,border-color .15s}
+.tip-iban:hover{background:#f3f1ea;border-color:#b7b1a2}
+
+.tip-todo{background:#f3f1ea;border-radius:10px;padding:16px;margin-bottom:16px}
+.tip-todo p{font-size:12px;color:var(--muted,#797566);margin:0;line-height:1.5}
+
+.tip-later{border:0;background:none;color:var(--muted,#797566);font-size:12px;padding:6px;
+  border-bottom:1px solid var(--line,#d8d3c5)}
+.tip-later:hover{color:var(--ink,#302c22)}
+
+@keyframes tip-fade{from{opacity:0}to{opacity:1}}
+@keyframes tip-pop{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+
+@media(max-width:680px){
+  .tip-fab{right:12px;bottom:12px;padding:10px 15px;font-size:12px}
+  .tip-dialog{padding:26px 20px 20px}
+  #tip-title{font-size:21px}
+}
+@media(prefers-reduced-motion:reduce){
+  .tip-overlay,.tip-dialog,.tip-fab{animation:none;transition:none}
+}
