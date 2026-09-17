@@ -82,7 +82,7 @@ export default function TipJar({ engaged }: { engaged: boolean }) {
 
         {configured ? <>
           <div className="tip-qr" dangerouslySetInnerHTML={{ __html: svg }} aria-label="QR platba" role="img" />
-          <p className="tip-qr-hint">Naskenuj v bankovní aplikaci – částka i zpráva se vyplní samy.</p>
+          <p className="tip-qr-hint">Naskenuj v bankovní aplikaci - částka i zpráva se vyplní samy.</p>
           <button className="tip-iban" onClick={copyIban}>
             {copied ? '✓ Zkopírováno' : `${donation.iban}  ·  kopírovat`}
           </button>
